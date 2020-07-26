@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="msgApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body{font-size: 1.3em;} </style>
+    <title>Dependency Injection in JAvascript and (AngularJS)</title>
+</head>
+<body>
+
+
+    <!------ DEPENDENCY INJECTION ------>
+    <!-- <h1>Dependency Injection in JAvascript and (AngularJS)</h1>
+    <div ng-controller="DIcontroller">
+            Your name:
+            <input type="text" 
+                ng-model="name"
+                ng-blur="upper();">
+    </div> -->
+
+
+    <!------ EXPRESSIONS AND INTERPOLATION ------>
+    <h1>Expressions and Interpolation</h1>
+    <div ng-controller="msgController">
+            {{name}} has a message for you: <br>
+            {{sayMessage()}}
+            <div>
+                <button ng-click="feedMayan()"> Feed Mayan </button>
+                <br>
+                <img ng-src="images/Splash_{{stateOfBeing}}.jpg" style="width: 20vw;">
+            </div>
+    </div>
+
+</body>
+</html>

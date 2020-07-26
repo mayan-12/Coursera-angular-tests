@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body{font-size: 1.3em;} </style>
+    <title>Name calculator</title>
+</head>
+<body ng-app="nameCalculator">
+    <h1>Name Calculator</h1>
+    <div ng-controller="nameCalculatorController">
+        <div>
+            Your name:
+            <input type="text" 
+                ng-model="name"
+                ng-keyup="displayNumeric();">
+        </div>
+        <div>
+            Total numeric value: {{totalValue}}
+        </div>
+    </div>
+</body>
+</html>
