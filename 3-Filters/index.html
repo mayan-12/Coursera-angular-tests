@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="msgApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body{font-size: 1.3em;} </style>
+    <title>Filters in Angular JS</title>
+</head>
+<body>
+
+
+    <!------ FILTERS IN ANGULARJS ------>
+    <h1>Expressions and Interpolation</h1>
+    <div ng-controller="msgController">
+            {{name}} has a message for you: <br>
+            Original: {{sayMessage()}} 
+            <br>
+            Loves: {{sayLovesMessage()}}
+            <br>
+            Truth: {{sayLovesMessage() | truth : 'healthy' : 'cookie' }}
+            <br>
+            BIG TRUTH: {{sayLovesMessage() | truth : 'healthy' : 'cookie' | uppercase }}
+            <div>
+                <button ng-click="feedMayan()"> Feed Mayan </button>
+
+                Cookie: {{ cookieCost | currency : "# " : 4 }}    <!------ Angular supplied filter ------>
+                <br>
+                <img ng-src="images/Splash_{{stateOfBeing}}.jpg" style="width: 20vw;">
+            </div>
+    </div>
+
+</body>
+</html>
